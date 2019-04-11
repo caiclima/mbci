@@ -1,0 +1,68 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	template="/WEB-INF/templateOnePage/templatePadrao.xhtml">
+
+	<ui:define name="head">
+
+
+	</ui:define>
+
+	<ui:define name="conteudo">
+	
+	<!--start-header-->
+			<!-- pop-up-box-->
+					  <script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+					<!-- link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/-->
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+					<!--//pop-up-box-->
+		<!--End-header-->
+		<div class="contact">
+			<div class="container">
+				<div class="contact-top">
+					<h3>CONTATO</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+				</div>
+				<div class="mp" align="center">
+					<!-- iframe align="left" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+of+Westminster,+United+Kingdom&amp;aq=0&amp;oq=westmi&amp;sll=51.50917,-0.245132&amp;sspn=0.311545,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=City+of+Westminster,+Greater+London,+United+Kingdom&amp;ll=51.483521,-0.082054&amp;spn=0.155803,0.41851&amp;t=m&amp;z=12&amp;output=embed"></iframe-->
+					<iframe align="left" src="https://www.google.com.br/maps/place/MBCI+igreja/@-8.747436,-63.8908547,17z/data=!3m1!4b1!4m2!3m1!1s0x92325ccab15f0a2f:0xc851bdc0048c2fff;output=embed"></iframe>
+					
+				</div>
+				<div class="contact-bottom">
+					<div class="col-md-6 contact-bottom-left">
+						<h3>Informações</h3>
+					<p>In pharetra dui vitae odio maximus vulputate. Nulam finibus dui more neque dui vitae odio maximu.In pharetra dui vitae odio maximus vulputate. Nullfinibus dui more neque.odio maximus vulputate. Nulla odio maximus vulputate. Nulla odio maxi.</p>
+					<h6>Av. Gov. Jorge Teixeira, 2425, Liberdade
+					<span>Porto Velho - RO</span>
+						Cep: 76803-877
+					</h6>
+					<p>Telephone: +55 (69) 9600-3139</p>
+					<h6>E-mail: <a href="mailto:info@example.com">mbci@mbci.com.br</a></h6>
+					
+					
+					</div>
+					<div class="col-md-6 contact-bottom-right">
+						<h3>Formulário para envio de e-mail</h3>
+						<div class="contact-text">
+						<input type="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"/>
+						<input type="text" value="Second Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Second Name';}"/>
+						<input type="text" value="Email Id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Id';}"/>
+					</div>
+					<div class="contact-textarea">
+						<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+					</div>
+					<div class="contact-but">
+						<input type="submit" />
+					</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

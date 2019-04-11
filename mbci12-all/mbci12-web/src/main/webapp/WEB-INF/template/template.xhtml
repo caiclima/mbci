@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<f:view locale="pt_br">
+
+	<h:head>
+		<ui:include src="header.xhtml" />
+		<ui:insert name="head" />
+
+	</h:head>
+
+	<h:body>
+		<h:outputStylesheet name="style-page.css" library="css" />
+		<h:outputStylesheet name="style-menu-left-animated.css" library="css" />
+		<h:outputStylesheet name="skin.css" library="css" />
+		
+		<h:form>
+		<div id="logo-wrap">
+			<div id="logo">
+				<h1>
+					<a href="#">MBCI 12 </a>
+				</h1>
+				
+				<h:graphicImage  library="images/imagesPage" name="logo.png" height="100%" width="30%"
+	           					 alt="50 ANOS" 
+	           					 title="50 ANOS"/>
+				<h2>Primeira Igreja Batista de Brasiléia</h2>
+			</div>
+		</div>
+		
+		<h:panelGrid id="logo-wrap2" >
+			<h:panelGrid columns="2">
+				
+			</h:panelGrid>
+		</h:panelGrid>
+
+
+		<div id="header">
+			<div id="menu">
+				<ul>
+					<!-- >li><a href="sobrenos">Sobre nós</a></li>
+					<li><a href="/mbci12-web/fotos">Fotos</a></li>
+					<h:outputLink value="/videos" >aaaa</h:outputLink-->
+					
+					<h:commandLink  action="#{genericBB.redirecionaPaginaInicial}" value="Página Inicial" />
+					<h:commandLink action="#{genericBB.redirecionaPaginaVideos}" value="Videos" />
+					<h:commandLink action="#{genericBB.redirecionaPaginaContato}" value="Contato" />
+					
+				</ul>
+			</div>
+		</div>
+
+		<div id="wrapper">
+			<div id="wrapper-btm">
+				<div id="page">
+
+					<!--div id="banner">&nbsp;</div-->
+
+					<div id="slidedeck_frame" class="skin-ribbons">
+						<dl class="slidedeck">
+							<dt>50 Anos</dt>
+							<dd>
+								
+								<h:graphicImage  library="images/imagesBunner" name="bunner-50-anos.jpg" width="650px" height="320" 
+					           					 alt="50 ANOS" 
+					           					 title="50 ANOS"/>
+							</dd>
+							<dt>Encontro com Deus</dt>
+							<dd>
+								<h:graphicImage  library="images/imagesBunner" name="bunner-encontro-deus.jpg" 
+				           					 alt="Encontro com Deus" width="650px" height="320"
+				           					 title="Encontro com Deus"/>
+							</dd>
+							<dt>Cursos</dt>
+							<dd>
+								<h:graphicImage  library="images/imagesBunner" name="bunner-cursos.jpg" 
+			           					 alt="Cursos" width="650px" height="320"
+			           					 title="Cursos"/>
+									
+							</dd>
+							<dt>Dê Passos de Fé</dt>
+							<dd>
+								<h:graphicImage  library="images/imagesBunner" name="bunner-passos-de-fe.jpg" 
+		           					 alt="Cursos" width="650px" height="320"
+		           					 title="Cursos"/>
+							</dd>
+							
+						</dl>
+					</div>
+
+					<ui:insert name="body" />
+
+
+					<!-- start sidebar -->
+					<div id="sidebar">
+
+
+						<div id="wrapperMenuLeft">
+
+
+							<div id="navegacaoMenuLeft">
+								<ul>
+									<li id="testeAnimacao1"><h6>Conheça-nos</h6>
+										<p>
+											<h:commandLink  action="#{genericBB.redirecionaNossaMissao}" value="Nossa Missão" />
+											
+										</p>
+										<p>
+											<h:commandLink  action="#{genericBB.redirecionaNossaVisao}" value="Nossa Visão" />
+										</p>
+										<p>
+											<h:commandLink  action="#{genericBB.redirecionaDesafios}" value="Desafios" />
+										</p> <!-- p><a href="#">Em que cremos</a></p>
+						<p><a href="#">Quem Somos</a></p>
+						<p><a href="#">História</a></p>
+						<p><a href="#">Valores</a></p>
+						<p><a href="#">Equipe Pastoral</a></p--></li>
+
+									<li id="testeAnimacao2"><h6>Programação</h6>
+										<p>
+											<h:commandLink  action="#{genericBB.redirecionaNoticias}" value="Notícias" />
+										</p>
+										<p>
+											<h:commandLink  action="#{genericBB.redirecionaIgrejasMbci}" value="Igrejas MBCI" />
+										</p></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- end sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+			<!-- end page -->
+		</div>
+		
+
+
+
+		<ui:include src="/WEB-INF/template/rodape.xhtml" />
+
+		<script type="text/javascript">
+			$('.slidedeck').slidedeck();
+		</script>
+		</h:form>
+
+	</h:body>
+
+</f:view>
+
+</html>

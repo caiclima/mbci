@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<f:view locale="pt_br">
+	<h:head>
+		<ui:include src="header02.xhtml" />
+		<ui:insert name="head" />
+
+		
+	<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider").responsiveSlides({
+    	pause: true,
+        auto: true,
+        timeout: 5000,         
+        manualControls: '#slider3-pager',
+
+       
+      });
+    });
+  </script>
+	
+	
+
+
+</h:head>
+
+<h:body>
+
+
+
+<!-- PRELOADER -->
+<h:graphicImage id="preloader"  library="images/onePage02" name="preloader.gif"/>
+
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+
+	<!-- PAGE -->
+	<div id="page">
+	
+		<!-- HEADER -->
+		<header>
+			
+			<!-- MENU BLOCK -->
+			<div class="menu_block">
+			
+				<!-- CONTAINER -->
+				<div class="container clearfix">
+					
+					<!-- LOGO -->
+					<div class="logo pull-left">
+						<a href="index.html" ><h:graphicImage library="images/onePage02" width="120px" name="logo.jpg" styleClass="ipad_img1" alt=""/></a>
+						
+					</div><!-- //LOGO -->
+					
+					<!-- SEARCH FORM -->
+					<div id="search-form" class="pull-right">
+						<form method="get" action="#">
+							<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+						</form>
+					</div><!-- SEARCH FORM -->
+					
+					<!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li class="first active scroll_btn"><a href="#home" >Inicio</a></li>
+								<li class="scroll_btn"><a href="#about" ></a></li>
+								<li class="sub-menu">
+									<a href="javascript:void(0);" >Conheça-nos</a>
+									<ul>
+										<li><a href="blog.html" >Nossa História</a></li>
+										<li><a href="blog-post.html" >Visão</a></li>
+										<li><a href="portfolio-post.html" >Missão</a></li>
+										<li><a href="portfolio-post.html" >Desafios</a></li>
+										<li><a href="portfolio-post.html" >Conheça os Pastores</a></li>
+										<li><a href="portfolio-post.html" >Palavra Pastoral</a></li>
+									</ul>
+								</li>
+								<li class="sub-menu">
+									<a href="javascript:void(0);" >Ministérios</a>
+									<ul>
+										<li><a href="blog.html" >Rede de Homens</a></li>
+										<li><a href="blog-post.html" >Rede de Mulheres</a></li>
+										<li><a href="portfolio-post.html" >Rede de Jovens</a></li>
+										<li><a href="portfolio-post.html" >Rede Kids</a></li>
+										<li><a href="portfolio-post.html" >Rede Família</a></li>
+									</ul>
+								</li>
+								<li class="sub-menu">
+									<a href="javascript:void(0);" >Conecte-se</a>
+									<ul>
+										<li><a href="blog.html" >1 Célula para você</a></li>
+										<li><a href="blog-post.html" >Capacitação Destino</a></li>
+										<li><a href="portfolio-post.html" >Pedidos de Oração</a></li>
+										<li><a href="portfolio-post.html" >Plano de Leitura Biblica</a></li>
+									</ul>
+								</li>
+								
+								
+								<li class="scroll_btn"><a href="#about" >Programação</a></li>
+								<li class="scroll_btn"><a href="#projects" >Mídias</a></li>
+								<li class="scroll_btn"><a href="#team" >Contato</a></li>
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
+				</div><!-- //MENU BLOCK -->
+			</div><!-- //CONTAINER -->
+		</header><!-- //HEADER -->
+		
+		<!-- NEWS -->
+		<section id="news">
+			
+			<ui:insert name="body"></ui:insert>
+		
+			<!-- CONTAINER -->
+			<div class="container">
+				<h2><b>Reflita sobre</b></h2>
+				
+				<!-- TESTIMONIALS -->
+				
+				
+				
+			</div><!-- //CONTAINER -->
+		</section><!-- //NEWS -->
+	</div><!-- //PAGE -->
+	
+	<!-- CONTACTS -->
+	<section id="contacts">
+	</section><!-- //CONTACTS -->
+	
+	<!-- FOOTER -->
+	<footer>
+			
+		<!-- CONTAINER -->
+		<div class="container">
+			
+			<!-- ROW -->
+			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30">
+					<h4><b>Programação</b> </h4>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Domingo - "Culto Da Família" e "Rede de Crianças" </a>
+							<ul class="post_item_inf_small">
+								<li>Das 19:00 às 21:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Segunda - "Discipulado com a equipe"</a>
+							<ul class="post_item_inf_small">
+								<li>Das 12:00 às 19:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Quarta - "Pré Encontro", "Pós Encontro" e "Capacitação de Destino"</a>
+							<ul class="post_item_inf_small">
+								<li>Das 19:30 às 21:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Quinta - "Culto Passos de Fé"</a>
+							<ul class="post_item_inf_small">
+								<li>Das 19:30 às 21:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Sexta - "Virgília"</a>
+							<ul class="post_item_inf_small">
+								<li>Das 19:30 às 21:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Sábado - "Rede de Jovens"</a>
+							<ul class="post_item_inf_small">
+								<li>Das 19:30 às 21:00</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
+					<h4><b>MBCI - Porto Velho</b></h4>
+					<p>Av. Jorge Texeira, 2425, Liberdade</p>
+					<p>Porto Velho-RO, CEP:76803-877</p>
+					<ul class="social">
+						<li> <a class="twitter simptip-position-bottom simptip-movable" data-tooltip="Twitter" href="#" > </a></li>
+						<li> <a class="facebook simptip-position-bottom simptip-movable" data-tooltip="Facebook" href="#"> </a></li>
+						<li> <a class="pin simptip-position-bottom simptip-movable" data-tooltip="Pintrest" href="#"> </a> </li>
+						<li> <a class="google-mais simptip-position-bottom simptip-movable" data-tooltip="Google+" href="#"> </a> </li>
+						
+					</ul>
+				</div>
+				
+				<div class="respond_clear"></div>
+				
+				<div class="col-lg-4 col-md-4 padbot30">
+					<h4><b>Contacts</b> Us</h4>
+					
+					<!-- CONTACT FORM -->
+					<div class="span9 contact_form">
+						<div id="note"></div>
+						<div id="fields">
+							<form id="contact-form-face" class="clearfix" action="#">
+								<h:inputText value="" onfocus="if (this.value == 'Nome') this.value = '' ;" onblur=" if (this.value == '') this.value = 'Nome';" />
+								<h:inputText value="" onfocus="if (this.value == 'Nome') this.value = '' ;" onblur=" if (this.value == '') this.value = 'Nome';" />
+								<h:inputTextarea value="" onfocus="if (this.value == 'Nome') this.value = '' ;"  />
+								<a4j:commandButton  value="Enviar" styleClass="contact_btn">Testes</a4j:commandButton>
+								<input class="contact_btn" type="submit" value="Send message" />
+								
+							</form>
+						</div>
+					</div><!-- //CONTACT FORM -->
+				</div>
+			</div><!-- //ROW -->
+		</div><!-- //CONTAINER -->
+	</footer><!-- //FOOTER -->
+	
+	
+	<!-- MAP
+	<div id="map">
+		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+		<iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe>
+	</div>  -->    <!-- //MAP -->
+
+
+</div>
+
+	
+</h:body>
+</f:view>
+</html>
+
+<!-- 
+<p><b>info_share-web</b> bunner e exemplo de vídeos</p> 
+<span>file:///C:/caic/projetos/example%20site/pagina%20unica/info_share-web/web/analise.html</span>
+
+<p><b>Membros</b>  para a parte da equipe de pastores e colocaboradores</p>
+<span>file:///C:/caic/projetos/example%20site/pagina%20unica/forty_eight-web/web/members.html</span>
+
+<p class="title"><b>Bunner</b> e outras páginas</p>
+<span>file:///C:/caic/projetos/example%20site/pagina%20unica/swim_plus-web/web/contact.html</span>
+
+
+ -->
+
+

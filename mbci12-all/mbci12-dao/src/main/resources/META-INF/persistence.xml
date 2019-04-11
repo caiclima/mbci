@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="CieloTelevendasDS" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/CieloTelevendasDS</jta-data-source>
+    
+    <class>br.com.callink.template.categorizador.pojo.Agendamento</class>
+    
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <validation-mode>NONE</validation-mode>
+    <properties>
+      <property name="hibernate.default_schema" value="dbo" />
+      <property name="hibernate.archive.autodetection" value="class, hbm" />
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.show_sql" value="${show_sql}"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="meldb" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/meldb</jta-data-source>
+    <class>br.com.callink.template.categorizador.pojo.NoCall</class>
+    <class>br.com.callink.template.categorizador.pojo.ExclusionList</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <validation-mode>NONE</validation-mode>
+    <properties>
+      <property name="hibernate.default_schema" value="dbo" />
+      <property name="hibernate.archive.autodetection" value="class, hbm" />
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.show_sql" value="${show_sql}"/>
+      <property name="hibernate.ejb.interceptor" value="br.com.callink.template.categorizador.dao.impl.utils.SQLServerInterceptor"/>
+      <property name="hibernate.dialect" value="br.com.callink.template.categorizador.dao.impl.utils.SQLServerCustomDialect"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>mbci12-all</artifactId>
+		<groupId>br.com.mbci12</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>mbci12-web</artifactId>
+	<packaging>war</packaging>
+	<name>mbci12-web</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.com.mbci12</groupId>
+			<artifactId>mbci12-util</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+		</dependency>
+
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+		<!--LOG4J -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+
+		<!-- JSF -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+		</dependency>
+
+		<!--RICHFACES -->
+		<dependency>
+			<groupId>org.richfaces</groupId>
+			<artifactId>richfaces-bom</artifactId>
+			<version>4.1.0.Final</version>
+			<scope>import</scope>
+			<type>pom</type>
+		</dependency>
+
+		<!-- JSON - GSON -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<!-- SERVLET -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+		</dependency>
+		
+		<!-- dependency>
+	        <groupId>javax.servlet.jsp</groupId>
+	        <artifactId>jsp-api</artifactId>
+	        <scope>provided</scope>
+	    </dependency-->
+	</dependencies>
+
+
+	<build>
+		<finalName>mbci12-web</finalName>
+		<plugins>
+			<!-- MAVEN TO WEB PROJECT -->
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<wtpversion>2.0</wtpversion>
+					<useProjectReferences>false</useProjectReferences>
+					<additionalBuildcommands>
+						<buildcommand>org.eclipse.wst.common.project.facet.core.builder</buildcommand>
+					</additionalBuildcommands>
+					<additionalProjectnatures>
+						<projectnature>org.eclipse.wst.common.project.facet.core.nature</projectnature>
+					</additionalProjectnatures>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+</project>

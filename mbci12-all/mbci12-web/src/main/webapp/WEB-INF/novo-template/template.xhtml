@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<f:view locale="pt_br">
+
+	<h:head>
+		<ui:include src="header.xhtml" />
+		<ui:insert name="head" />
+
+	</h:head>
+
+	<h:body>
+		<h:outputStylesheet name="style-pagina-principal.css" library="css" />
+
+		<h:form>
+			<div id="logo-wrap">
+				<div id="logo">
+					<h1>
+						<a href="#">MBCI 12 </a>
+					</h1>
+
+					<h:graphicImage library="images/imagesPage" name="logo.png"
+						height="100%" width="30%" alt="50 ANOS" title="50 ANOS" />
+				</div>
+			</div>
+
+			<h:panelGrid id="logo-wrap2">
+				<h:panelGrid columns="2">
+					<h1>AREA DO MENU SUPERIOR</h1>
+				</h:panelGrid>
+			</h:panelGrid>
+
+
+			<div id="header">
+				<div id="menu">
+					<ul>
+						<h:commandLink action="#{genericBB.redirecionaPaginaInicial}"
+							value="Página Inicial" />
+
+					</ul>
+				</div>
+			</div>
+
+			<div id="bunner">
+				<!-- end page -->
+			</div>
+
+			<ui:insert name="body" />
+
+			<ui:include src="/WEB-INF/novo-template/rodape.xhtml" />
+		</h:form>
+	</h:body>
+</f:view>
+</html>

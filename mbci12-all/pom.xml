@@ -1,0 +1,288 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.mbci12</groupId>
+	<artifactId>mbci12-all</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>mbci12-all</name>
+	<modules>
+		<module>mbci12-pojo</module>
+		<module>mbci12-util</module>
+		<module>mbci12-dao</module>
+		<module>mbci12-service</module>
+		<module>mbci12-web</module>
+	</modules>
+
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<!-- MY PROJECT -->
+			<dependency>
+				<groupId>br.com.mbci12</groupId>
+				<artifactId>mbci12-web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.mbci12</groupId>
+				<artifactId>mbci12-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.mbci12</groupId>
+				<artifactId>mbci12-util</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>br.com.mbci12</groupId>
+				<artifactId>mbci12-dao</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.mbci12</groupId>
+				<artifactId>mbci12-pojo</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+
+			<!-- COMMONS LANG -->
+			<dependency>
+				<groupId>commons-configuration</groupId>
+				<artifactId>commons-configuration</artifactId>
+				<version>1.6</version>
+			</dependency>
+			
+			<!-- EJB -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>${javaee.version}</version>
+			</dependency>
+			
+			<!-- DRIVER MySQL -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.version}</version>
+			</dependency>
+
+			<!-- Hibernate -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			
+			 <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.0-api</artifactId>
+                <version>1.0.1.Final</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${hibernate.version}</version>
+                <exclusions> 
+		            <exclusion>
+		               <groupId>dom4j</groupId>
+		               <artifactId>dom4j</artifactId>
+		            </exclusion>
+        		</exclusions>
+            </dependency>
+
+
+			<!-- JUNIT -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.10</version>
+			</dependency>
+
+			<!--LOG4J -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.16</version>
+			</dependency>
+
+			<!-- JSF -->
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-api</artifactId>
+				<version>2.1.6</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-impl</artifactId>
+				<version>2.1.6</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.el</groupId>
+				<artifactId>el-api</artifactId>
+				<version>2.2</version>
+			</dependency>
+
+			<!--RICHFACES -->
+			<dependency>
+				<groupId>org.richfaces</groupId>
+				<artifactId>richfaces-bom</artifactId>
+				<version>4.1.0.Final</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+
+			<!-- JSON - GSON -->
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>1.7.1</version>
+			</dependency>
+
+			<!-- SERVLET -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>2.1</version>
+			</dependency>
+
+
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>1.6.4</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.4.3</version>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+			</plugins>
+		</pluginManagement>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+	</build>
+
+	<repositories>
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo1</id>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+
+		<repository>
+			<id>mvnrepo</id>
+			<url>http://mvnrepository.googlecode.com/svn/repo</url>
+		</repository>
+
+
+	</repositories>
+
+	<developers>
+		<developer>
+			<name>Ednaldo Caic Goncalves Lima</name>
+			<email>ednaldo@swb.com.br</email>
+			<organization>Bahia TI LTDA.</organization>
+		</developer>
+	</developers>
+
+	<properties>
+        <springframework.version>4.0.6.RELEASE</springframework.version>
+        <hibernate.version>4.3.6.Final</hibernate.version>
+        <mysql.connector.version>5.1.31</mysql.connector.version>
+        <dbunit.version>2.2</dbunit.version>
+        <javaee.version>6.0</javaee.version>
+    </properties>
+
+</project>
